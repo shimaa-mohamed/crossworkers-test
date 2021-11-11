@@ -1,0 +1,49 @@
+/* DO NOT CHANGE THIS ROOT CLASS NAME*/
+@light-grey: #f8f4f4;
+@medium-grey: #6e6969;
+@danger: #ff5252;
+@fadeDanger: #cf7070;
+@darkGey:#222324;
+@white:#fff;
+@babyBlue:#b1ccd1;
+
+.TASK_5 {
+
+    form{
+        padding: 20px;
+        background-color: @darkGey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label{
+            font-weight: 900;
+            color: @white;
+        }
+        input{
+            width: 50%;
+            padding: 10px;
+            margin: 5px;
+            background-color: @light-grey;
+            outline: none;
+            border-radius: 10px;
+            border: 2px solid @medium-grey;
+        }
+        input:focus{
+            background-color: @babyBlue;
+        }
+        button{
+            width: 10%;
+            padding: 10px;
+            background-color:@danger ;
+            border: none;
+            border-radius: 20px;
+            margin: 10px;
+            color:@white;
+            font-weight: 500;
+        }
+        button:hover{
+            background-color:@fadeDanger ;
+        }
+    }
+    
+}

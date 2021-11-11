@@ -1,0 +1,114 @@
+/* DO NOT CHANGE THIS ROOT CLASS NAME*/
+@light-grey: #f8f4f4;
+@medium-grey: #6e6969;
+@danger: #ff5252;
+@fadeDanger: #ac0a0a;
+@white: #fff;
+@black: #000;
+@babyBlue:#b2e8f1;
+.TASK_6 {
+  .todo-list-wrapper {
+    background-color:@babyBlue ;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .add-todo-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin:20px;
+        input {
+          flex: 2;
+          padding: 5px;
+          margin: 5px;
+          outline: none;
+          border: 1px solid @black;
+        }
+        input:focus{
+          border: 2px solid @danger;
+        }
+        button {
+          background-color: @danger;
+          color: @white;
+          border-radius: 50%;
+          border: none;
+          cursor: pointer;
+          padding:12px;
+        }
+        button:hover {
+          background-color: @fadeDanger;
+        }
+      }
+      .search {
+        border: none;
+        outline: none;
+        background-color: @light-grey;
+        border-bottom: 2px solid goldenrod;
+        width: 100%;
+        padding: 10px;
+      }
+      .search:focus{
+        border: 2px solid @danger;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+      }
+      .todo-item {
+        display: flex;
+        justify-content: space-between;
+        background-color: @light-grey;
+        border-bottom: 1px solid @medium-grey;
+        padding: 5px 0;
+        margin: 5px 0;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+        p {
+          margin: 0;
+        }
+        button {
+          background-color: @danger;
+          color: @white;
+          margin: 0 10px;
+          cursor: pointer;
+        }
+        .done {
+          text-decoration: line-through;
+        }
+      }
+    }
+    .filters-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      input[type="radio"] {
+        display: none;
+      }
+      .custom-radio {
+        color: @black;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 3px;
+        width: 30%;
+        padding: 5px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .checked {
+        background-color: @danger;
+        color: @white;
+      }
+      .checked:hover {
+        background-color: @fadeDanger;
+      }
+    }
+  }
+}
