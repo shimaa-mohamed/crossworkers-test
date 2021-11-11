@@ -6,9 +6,14 @@ export type TodoItem = {
   name: string;
   todoStatus: boolean;
 };
+export enum FILTERS{
+  ALL="All",
+  DONE="Done",
+  PENDING="Pending"
+}
 
 class TodoList extends React.Component<any> {
-  state = { todos: [], itemToBeAdded: "", searchValue: "", filter: "All" };
+  state = { todos: [], itemToBeAdded: "", searchValue: "", filter: FILTERS.ALL };
 
   handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     //add the new todo to the list of todos and clear the input field
@@ -46,12 +51,12 @@ class TodoList extends React.Component<any> {
   filteredTodos = (filterName: string): TodoItem[] => {
     //this function returns the list of todos to show according to the applied filter and also the search field
     const { todos, searchValue } = this.state;
-    if (filterName === "Done") {
+    if (filterName === FILTERS.DONE) {
       return todos.filter(
         (todo: TodoItem) =>
           todo.todoStatus === true && todo.name.includes(searchValue)
       );
-    } else if (filterName === "Pending") {
+    } else if (filterName === FILTERS.PENDING) {
       return todos.filter(
         (todo: TodoItem) =>
           todo.todoStatus === false && todo.name.includes(searchValue)

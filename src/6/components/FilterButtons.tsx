@@ -1,5 +1,5 @@
 import * as React from "react";
-import "../index.less";
+import { FILTERS } from "./TodoList";
 
 interface FilterButtonProps {
   setFilter: (filterName: string) => void;
@@ -14,53 +14,53 @@ class FilterButtons extends React.Component<FilterButtonProps> {
       <div className="filters-wrapper">
         <>
           <input
-            id="All"
+            id={FILTERS.ALL}
             type="radio"
             name="filter"
-            value="All"
+            value={FILTERS.ALL}
             onChange={(e) => setFilter(e.target.value)}
           />
           <label
             className={`custom-radio ${
-              isCurrentFilter("All") ? "checked" : ""
+              isCurrentFilter(FILTERS.ALL) ? "checked" : ""
             }`}
-            htmlFor="All"
+            htmlFor={FILTERS.ALL}
           >
-            All
+            {FILTERS.ALL}
           </label>
         </>
         <>
           <input
-            id="Done"
+            id={FILTERS.DONE}
             type="radio"
             name="filter"
-            value="Done"
+            value={FILTERS.DONE}
             onChange={(e) => setFilter(e.target.value)}
           />
           <label
             className={`custom-radio ${
-              isCurrentFilter("Done") ? "checked" : ""
+              isCurrentFilter(FILTERS.DONE) ? "checked" : ""
             }`}
-            htmlFor="Done"
+            htmlFor={FILTERS.DONE}
           >
-            Done
+            {FILTERS.DONE}
           </label>
         </>
         <>
           <input
-            id="Pending"
+            id={FILTERS.PENDING}
             type="radio"
             name="filter"
-            value="Pending"
+            value={FILTERS.PENDING}
             onChange={(e) => setFilter(e.target.value)}
           />
           <label
             className={`custom-radio ${
-              isCurrentFilter("Pending") ? "checked" : ""
+              isCurrentFilter(FILTERS.PENDING) ? "checked" : ""
             }`}
-            htmlFor="Pending"
+            htmlFor={FILTERS.PENDING}
           >
-            Pending
+            {FILTERS.PENDING}
           </label>
         </>
       </div>
