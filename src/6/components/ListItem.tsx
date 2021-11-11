@@ -1,6 +1,5 @@
 import * as React from "react";
 import { TodoItem } from "./TodoList";
-import "../index.less";
 
 interface ListItemProps {
   index: number;
